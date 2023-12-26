@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  place-items: center;
+  display: grid;
+  margin: 0;
+  height: 100vh;
+  font-family: 'Dancing Script', cursive;
+  background-color: lightcoral;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  width: 80vw;
+  background-color: white;
+  overflow: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#ctrl {
+  background-color: lightcoral;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  line-height: 40px;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+
+.text {
+  padding: 1em;
+  font-size: 30px;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.muted {
+  opacity: 0.8;
+  justify-content: flex-end;
+  display: flex;
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 476px) and (max-width: 2460px){
+  .text {
+    font-size: 13px;
+  }
+  #ctrl {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    border-radius: 100%;
+  }
+}
+
+@media only screen and (min-heigth: 490px) and (max-heigth: 1080) {
+  .text {
+    font-size: 13px;
+  }
+  #ctrl {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    border-radius: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body.play-music {
+  animation: fadeIn 2s ease-in-out;
+}
